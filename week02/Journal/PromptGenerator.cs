@@ -20,6 +20,9 @@ public class PromptGenerator
     public string GetRandomPrompt()
     {
         // Generate a random number between 0 and the number of prompts
-        return "";       
+        Random random = new Random();
+        int index = random.Next(_prompts.Count);
+        // Return the prompt at that index
+        return _prompts[index];               
     }
 }
