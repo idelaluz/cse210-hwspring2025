@@ -12,5 +12,9 @@ class Program
         Console.WriteLine("4. Load entries from file");
         Console.WriteLine("5. Exit");
         Console.Write("Enter your choice: ");
+        string choice = Console.ReadLine();
+        //Journal journal = new Journal();
+        
+
     }
 }
