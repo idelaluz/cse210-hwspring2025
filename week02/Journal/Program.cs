@@ -38,20 +38,33 @@ class Program
                 journal.AddEntry(entry);
 
             }
-            
+
             else if (choice == "2")
             {
+                journal.DisplayAll();
             }
+
             else if (choice == "3")
             {
+                Console.Write("What is the filename? ");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
+                Console.WriteLine("Entries loaded from file.");
             }
+
             else if (choice == "4")
             {
+                Console.Write("What is the file name? ");
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
+                Console.WriteLine("Entries saved to file.");
             }
+
             else if (choice == "5")
             {
                 Console.WriteLine("Goodbye!");
             }
+            
             else
             {
                 Console.WriteLine("Invalid choice. Please try again.");
