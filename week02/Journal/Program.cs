@@ -4,8 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        Journal journal = new Journal();
+        PromptGenerator promptGen = new PromptGenerator();
+
         Console.WriteLine("Welcome to the Personal Journal Program!");
         String choice;
+
         do
         {
             Console.WriteLine("Please select one of the following choices:");
@@ -16,9 +20,25 @@ class Program
             Console.WriteLine("5. Exit");
             Console.Write("Enter your choice: ");
             choice = Console.ReadLine();
+
             if (choice == "1")
             {
+                string prompt = promptGen.GetRandomPrompt();
+                Console.WriteLine(prompt);
+                Console.Write("Enter your journal entry: ");
+                string entryText = Console.ReadLine();
+
+                Entry entry = new Entry
+                {
+                    _date = DateTime.Now.ToString("dd.MM.yyyy"),
+                    _promptText = prompt,
+                    _entryText = entryText
+                };
+
+                journal.AddEntry(entry);
+
             }
+            
             else if (choice == "2")
             {
             }
