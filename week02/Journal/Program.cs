@@ -46,7 +46,7 @@ class Program
 
             else if (choice == "3")
             {
-                Console.Write("What is the filename? ");
+                Console.Write("What is the file name you want to load? ");
                 string filename = Console.ReadLine();
                 journal.LoadFromFile(filename);
                 Console.WriteLine("Entries loaded from file.");
@@ -54,7 +54,7 @@ class Program
 
             else if (choice == "4")
             {
-                Console.Write("What is the file name? ");
+                Console.Write("Please name this file before saving it: ");
                 string filename = Console.ReadLine();
                 journal.SaveToFile(filename);
                 Console.WriteLine("Entries saved to file.");
