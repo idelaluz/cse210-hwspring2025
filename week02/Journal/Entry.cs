@@ -7,7 +7,7 @@ public class Entry
     public void Display()
     {
         Console.WriteLine($"{_date}: - Prompt: {_promptText}");
-        Console.WriteLine($"Journal entry: {_entryText});
+        Console.WriteLine($"Journal entry: {_entryText}");
     }
 
 }
