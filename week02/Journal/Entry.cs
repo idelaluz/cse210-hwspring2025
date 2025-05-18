@@ -1,5 +1,3 @@
-using System.Diagnostics.Contracts;
-
 public class Entry
 {
     public string _date;
